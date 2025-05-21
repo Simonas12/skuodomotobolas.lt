@@ -28,7 +28,7 @@ a:hover {
     margin: 0 auto;
     padding: 0 15px;
 }
-        
+
         /* Header Styles */
  /* Header Styles */
  header {
@@ -162,26 +162,6 @@ nav ul li a:hover {
 .fixed-social .social-btn {
     margin: 5px 0;
 }
-
-@media (max-width: 767px) {
-    .team-name {
-        display: none;
-    }
-    
-    .logo-container {
-        justify-content: space-between;
-        width: 100%;
-    }
-    
-    .social-media {
-        display: none;
-    }
-    
-    .fixed-social {
-        display: flex;
-    }
-}
-
 /* News Section */
 .news-section {
     margin: 30px 0;
@@ -211,23 +191,10 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-@media (min-width: 768px) {
-    .news-container {
-        flex-direction: row;
-    }
-}
-
 .main-news {
     flex: 2;
     margin-right: 0;
     margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-    .main-news {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
 }
 
 .news-slider {
@@ -316,9 +283,55 @@ nav ul li a:hover {
     margin-bottom: 5px;
 }
 
-.news-item p {
-    color: #ccc;
-    font-size: 14px;
+/* Results Section */
+.results-section {
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.results-section h2.section-title {
+    color: #ffcc00;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.results-table thead tr {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px 15px;
+    border: 1px solid #000;
+}
+
+.results-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    background-color: #1a1a1a;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+.results-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.results-table tbody tr:hover {
+    background-color: #333;
 }
 
 /* Events Section */
@@ -331,23 +344,10 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-@media (min-width: 768px) {
-    .events-container {
-        flex-direction: row;
-    }
-}
-
 .schedule {
     flex: 2;
     margin-right: 0;
     margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-    .schedule {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
 }
 
 .schedule-table {
@@ -401,6 +401,55 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Tournament Tables */
+.tornament-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.tornament-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tornament-table th {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tornament-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.tornament-table tr:hover {
+    background-color: #1a1a1a;
+}
+
+.tornament-table caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+.team-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.winner {
+    color: #ffcc00;
+}
+
 /* Footer */
 footer {
     background-color: #1a1a1a;
@@ -413,23 +462,10 @@ footer {
     flex-direction: column;
 }
 
-@media (min-width: 768px) {
-    .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
 .footer-section {
     flex: 1;
     margin-bottom: 20px;
     padding: 0 15px;
-}
-
-@media (min-width: 768px) {
-    .footer-section {
-        margin-bottom: 0;
-    }
 }
 
 .footer-section h3 {
@@ -485,6 +521,49 @@ footer {
     color: #ffcc00;
     font-size: 24px;
     cursor: pointer;
+    padding: 10px;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+    .news-container, .events-container {
+        flex-direction: row;
+    }
+    
+    .main-news, .schedule {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-section {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .search-container {
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+    
+    .team-names {
+        text-align: left;
+        margin-left: 20px;
+    }
+    
+    .news-slider {
+        height: 450px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -512,129 +591,66 @@ footer {
         margin: 0 0 10px 0;
     }
     
-    .news-container, .events-container {
-        flex-direction: column;
-    }
-    
-    .main-news, .schedule {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
-@media (max-width: 767px) {
-    .team-name {
+    .social-media {
         display: none;
     }
     
-    .logo-container {
-        justify-content: space-between;
-        width: 100%;
+    .fixed-social {
+        display: flex;
+    }
+    
+    .team-names {
+        font-size: 24px;
+    }
+    
+    .news-slider {
+        height: 300px;
+    }
+    
+    .slide-content h3 {
+        font-size: 18px;
+    }
+    
+    .slide-content p {
+        font-size: 14px;
+    }
+    
+    .tornament-table {
+        font-size: 14px;
+    }
+    
+    .tornament-table th, 
+    .tornament-table td {
+        padding: 8px 5px;
     }
 }
 
-
-/* Results table styles */
-.results-section {
-    margin: 40px auto;
-    max-width: 800px;
-    text-align: center;
-    border-radius: 10px;
+@media (max-width: 480px) {
+    .team-names {
+        font-size: 20px;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+    
+    .news-slider {
+        height: 250px;
+    }
+    
+    .results-table th,
+    .results-table td,
+    .schedule-table th,
+    .schedule-table td {
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+    
+    .tornament-table {
+        font-size: 12px;
+    }
+    
+    .tornament-table caption {
+        font-size: 16px;
+    }
 }
-
-.results-section h2.section-title {
-    color: #ffcc00;;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.results-table thead tr {
-    background-color:  #ffcc00;
-    color: #1a1a1a;
-    text-align: center;
-}
-
-.results-table th,
-.results-table td {
-    padding: 12px 15px;
-    border: 1px solid #000;
-}
-
-.results-table tbody tr {
-    border-bottom: 1px solid #ddd;
-    background-color: #1a1a1a;
-}
-
-.results-table tbody tr:nth-child(even) {
-    background-color: #1a1a1a;
-}
-
-.results-table tbody tr:last-of-type {
-    border-bottom: 2px solid #1a1a1a;
-}
-
-.results-table tbody tr:hover {
-    background-color: #333;
-}
-
-/* Add this to your HTML after the events-section */
-
-     .tornament-container {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        
-        .tornament-table {
-            width: 80%;
-            max-width: 800px;
-            border-collapse: collapse;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        .tornament-table th {
-            background-color:  #ffcc00;
-            color:#1a1a1a;
-            padding: 12px;
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .tornament-table td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        /* .tornament-table tr:nth-child(even) {
-            background-color: #1a1a1a;
-        } */
-        
-        .tornament-table tr:hover {
-            background-color:#1a1a1a;
-        }
-        
-        .tornament-table caption {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #ffcc00;
-        }
-        
-        .team-name {
-            font-weight: bold;
-            font-size: 13px;
-        }
-        
-        .winner {
-            color: #ffcc00;
-            /* font-weight: bold; */
-        }
