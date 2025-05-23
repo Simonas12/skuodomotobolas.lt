@@ -657,3 +657,32 @@ footer {
         font-size: 16px;
     }
 }
+@media (max-width: 400px) {
+    .tornament-table {
+        font-size: 10px;
+    }
+    
+    .tornament-table th,
+    .tornament-table td {
+        padding: 4px 2px;
+    }
+    
+    .team-name {
+        font-size: 9px;
+        max-width: 60px;
+    }
+    
+    .tornament-table caption {
+        font-size: 14px;
+    }
+}
+
+/* Horizontal scroll indicator for mobile */
+.tornament-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.tornament-container::-webkit-scrollbar-thumb {
+    background-color: #ffcc00;
+    border-radius: 5px;
+}
