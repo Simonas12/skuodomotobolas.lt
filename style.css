@@ -629,6 +629,9 @@ footer {
     .team-names {
         font-size: 20px;
     }
+    .tornament-container {
+        width: 450px;
+    }
     
     .logo img {
         width: 100px;
