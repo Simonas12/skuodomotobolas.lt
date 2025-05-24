@@ -68,15 +68,17 @@ header {
 /* Main content container */
 .main-content {
     margin-top: 150px; /* Reduced from 150px for better mobile spacing */
-    padding: 0 20px;
+    padding: 0 70px;
 }
 
 /* Cards container */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(3, 200px);
     padding: 20px 0;
+    justify-content: center;
+    justify-items: center;
+    gap: 155px;
 }
 
 /* Card styles */
@@ -85,8 +87,9 @@ header {
     color: #000;
     border-radius: 10px;
     overflow: hidden;
-    height: 400px;
-    perspective: 1000px;
+    height: 500px;
+    width: 300px;
+    /* perspective: auto; */
     cursor: pointer;
     transition: all 0.3s;
     position: relative;
@@ -130,11 +133,11 @@ header {
 
 .card-image {
     width: 100%;
-    height: 70%;
+    height: 100%;
     object-fit: cover;
 }
 
-.card-text {
+/* .card-text {
     padding: 15px;
     text-align: center;
     font-size: 16px;
@@ -144,11 +147,11 @@ header {
     justify-content: center;
     background-color: #000;
     color: #ffcc00;
-}
+} */
 
 .back-image {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -227,7 +230,7 @@ header {
     }
     
     .card {
-        height: 350px;
+        height: 500px;
     }
     
     .menu-active .title {
@@ -245,7 +248,7 @@ header {
     }
     
     .card {
-        height: 300px;
+        height: 500px;
     }
     
     .card-text {
@@ -270,7 +273,7 @@ header {
     }
     
     .card {
-        height: 250px;
+        height: 500px;
     }
     
     .card-text {
